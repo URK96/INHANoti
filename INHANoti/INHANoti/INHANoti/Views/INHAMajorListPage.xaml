@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="INHANoti.Views.INHAMajorListPage"
+             Title="학과 선택">
+
+    <StackLayout Orientation="Vertical">
+
+        <SearchBar
+            Placeholder="학과 검색"
+            HorizontalTextAlignment="Center"
+            TextChanged="SearchBar_TextChanged"/>
+
+        <CollectionView
+            x:Name="MajorCollectionView" 
+            SelectionMode="Single"
+            SelectionChanged="MajorCollectionView_SelectionChanged">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout 
+                    Orientation="Vertical"
+                    ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding Name}"
+                            FontSize="Large"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+    </StackLayout>
+    
+</ContentPage>

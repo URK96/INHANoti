@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="INHANoti.Views.AppInfoPage"
+             Title="INHA Noti 정보">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="닫기"
+            IconImageSource="close_icon.png"
+            Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout 
+        Orientation="Vertical"
+        Margin="0, 50, 0, 0"
+        VerticalOptions="Center">
+        <Image 
+            Source="appinfo_icon.png"
+            Aspect="AspectFit"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+        <Label
+            Margin="0, 20, 0, 0"
+            Text="INHA Noti"
+            HorizontalTextAlignment="Center"
+            FontSize="Title"/>
+        <Label
+            Margin="0, 20, 0, 0"
+            Text="인하대 공지사항 뷰어 앱"
+            HorizontalTextAlignment="Center"
+            FontSize="Subtitle"/>
+        <Label
+            Margin="0, 50, 0, 0"
+            Text="Developer : URK96"
+            HorizontalTextAlignment="Center"
+            FontSize="Subtitle"/>
+        <Label
+            Margin="0, 10, 0, 0"
+            Text="E-Mail : chlwlsgur96@hotmail.com"
+            HorizontalTextAlignment="Center"
+            FontSize="Subtitle"/>
+        <Label
+            Margin="0, 30, 0, 0"
+            Text="Icon made by Kiranshastry from www.flaticon.com"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="End"
+            FontSize="Micro"/>
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="EndAndExpand"
+            HorizontalOptions="Center">
+            <Image
+                Source="xamarin_onlylogo.png"
+                HeightRequest="30"/>
+            <Label
+                Margin="0, 0, 0, 0"
+                Text="Powered by Xamarin.Forms"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="Micro"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

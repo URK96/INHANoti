@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             mc:Ignorable="d"
+             x:Class="INHANoti.Views.INHAMainNotiPage"
+             Title="INHA 공지사항"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="뒤로"
+                 Order="Primary"
+                 Priority="0"
+                 IconImageSource="previous_icon.png"
+                 Clicked="OnBackItemClick"/>
+        <ToolbarItem Text="앞으로"
+                 Order="Primary"
+                 Priority="0"
+                 IconImageSource="next_icon.png"
+                 Clicked="OnForwardItemClick"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+
+        <ProgressBar 
+            x:Name="WebViewProgressBar"
+            IsVisible="False"
+            VerticalOptions="StartAndExpand"/>
+
+        <WebView 
+            x:Name="INHAMainNotiWebView"
+            VerticalOptions="FillAndExpand"
+            Navigating="INHAMainNotiWebView_Navigating"
+            Navigated="INHAMainNotiWebView_Navigated"
+            android:WebView.EnableZoomControls="True"
+            android:WebView.MixedContentMode="CompatibilityMode"/>
+
+    </StackLayout>
+    
+</ContentPage>
