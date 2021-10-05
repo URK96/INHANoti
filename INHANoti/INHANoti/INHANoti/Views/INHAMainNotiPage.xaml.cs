@@ -24,7 +24,7 @@ namespace INHANoti.Views
         {
             base.OnAppearing();
 
-            webView.Source = "https://www.inha.ac.kr/kr/950/subview.do";
+            //webView.Source = "https://www.inha.ac.kr/kr/950/subview.do";
         }
 
         private void OnBackItemClick(object sender, EventArgs e)
@@ -43,19 +43,14 @@ namespace INHANoti.Views
             }
         }
 
-        private async void INHAMainNotiWebView_Navigating(object sender, WebNavigatingEventArgs e)
+        private void INHAMainNotiWebView_Navigating(object sender, WebNavigatingEventArgs e)
         {
-            WebViewProgressBar.Progress = 0;
-            WebViewProgressBar.IsVisible = true;
-
-            await WebViewProgressBar.ProgressTo(0.95, 1000, Easing.CubicInOut);
+            
         }
 
-        private async void INHAMainNotiWebView_Navigated(object sender, WebNavigatedEventArgs e)
+        private void INHAMainNotiWebView_Navigated(object sender, WebNavigatedEventArgs e)
         {
-            await WebViewProgressBar.ProgressTo(1.00, 500, Easing.Linear);
-
-            WebViewProgressBar.IsVisible = false;
+            
         }
 
         protected override bool OnBackButtonPressed()

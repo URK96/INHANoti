@@ -1,10 +1,10 @@
 ﻿using INHANoti.Views;
-using System.Timers;
+
 using Xamarin.Forms;
 
 namespace INHANoti
 {
-    public partial class AppShell : Xamarin.Forms.Shell
+    public partial class AppShell : Shell
     {
         public AppShell()
         {

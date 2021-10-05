@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 using Xamarin.Forms;
 
 namespace INHANoti
@@ -13,8 +14,7 @@ namespace INHANoti
         {
             string[] major =
             {
-                "프런티어 학부 - 일반",
-                "프런티어 학부 - 수업",
+                "프런티어 학부",
                 "공과대학",
                 "기계공학과",
                 "산업경영공학과",
@@ -88,8 +88,7 @@ namespace INHANoti
 
             string[] urls =
             {
-                "https://generaledu.inha.ac.kr/board_notice/list.aspx",
-                "https://generaledu.inha.ac.kr/board_notice_class/list.aspx",
+                "https://generaledu.inha.ac.kr/generaledu/3762/subview.do",
                 "https://engcollege.inha.ac.kr/engcollege/640/subview.do",
                 "https://mech.inha.ac.kr/board_notice/list.aspx",
                 "https://dept.inha.ac.kr/user/indexSub.do?codyMenuSeq=1089&siteId=ie",

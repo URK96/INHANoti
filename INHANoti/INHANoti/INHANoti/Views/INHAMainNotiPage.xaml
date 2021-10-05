@@ -10,28 +10,16 @@
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="뒤로"
-                 Order="Primary"
-                 Priority="0"
-                 IconImageSource="previous_icon.png"
-                 Clicked="OnBackItemClick"/>
-        <ToolbarItem Text="앞으로"
-                 Order="Primary"
-                 Priority="0"
-                 IconImageSource="next_icon.png"
-                 Clicked="OnForwardItemClick"/>
+        <ToolbarItem Text="뒤로" Order="Primary" Priority="0" IconImageSource="previous_icon.png" Clicked="OnBackItemClick"/>
+        <ToolbarItem Text="앞으로" Order="Primary" Priority="0" IconImageSource="next_icon.png" Clicked="OnForwardItemClick"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout>
 
-        <ProgressBar 
-            x:Name="WebViewProgressBar"
-            IsVisible="False"
-            VerticalOptions="StartAndExpand"/>
-
         <WebView 
             x:Name="INHAMainNotiWebView"
             VerticalOptions="FillAndExpand"
+            Source="https://www.inha.ac.kr/kr/950/subview.do"
             Navigating="INHAMainNotiWebView_Navigating"
             Navigated="INHAMainNotiWebView_Navigated"
             android:WebView.EnableZoomControls="True"
